@@ -6,3 +6,7 @@ function new_yorker_files()
 }
 //Enqueue all files above on every page
 add_action('wp_enqueue_scripts', 'new_yorker_files');
+
+
+//remove admin bar
+add_filter('show_admin_bar', '__return_false');

@@ -1,14 +1,14 @@
-@import "./variables";
+@use "./variables";
 
 //creates breakpoints from the breakpoints map
-@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
-  // If $mq-breakpoint is a key that exists in
-  // $mq-breakpoints, get and use the value
-  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
-    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+@mixin atSmall {
+  @media (max-width: 767px) {
+    @content;
   }
+}
 
-  @media screen and (min-width: #{$mq-breakpoint}) {
+@mixin atMedium {
+  @media (max-width: 960px) {
     @content;
   }
 }

@@ -1,0 +1,65 @@
+header {
+  box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px;
+  position: sticky;
+  width: 100%;
+}
+
+//logo area
+.logo-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $graphik;
+  font-size: 12px;
+  border-bottom: 1px solid rgb(229, 229, 229);
+  height: 7rem;
+}
+
+.offer-section {
+  height: 100px;
+  width: 25%;
+}
+
+.main-logo {
+  flex-grow: 1;
+}
+
+.utility-links {
+  height: 100px;
+  width: 25%;
+}
+
+.utility-links > a {
+  margin-right: 10px;
+}
+
+#logo {
+  @include push--auto;
+  width: 300px;
+  height: auto;
+}
+
+.utility-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+//navigation
+.navigation-menu > ul > li {
+  margin-right: 1rem;
+  font-family: $graphik;
+  font-size: 12px;
+}
+
+.navigation-menu a:hover {
+  text-decoration: underline;
+}
+
+.navigation-menu {
+  display: flex;
+  justify-content: center;
+  height: 3rem;
+}
