@@ -1,0 +1,18 @@
+//Header font
+@font-face {
+  font-family: "Irvin Heading";
+  src: url("../../assets/fonts/NewYorker.woff2") format("woff2-variations");
+  font-weight: normal;
+  font-style: normal;
+}
+
+//Body font
+@font-face {
+  font-family: "Caslon New";
+  src: url("../../assets/fonts/CaslonPro/ACaslonPro-Regular.otf")
+      format("woff2 supports variations"),
+    url("../../assets/fonts/CaslonPro/ACaslonPro-Regular.otf")
+      format("woff2-variations");
+  font-weight: 400;
+  font-style: normal;
+}

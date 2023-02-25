@@ -1,0 +1,62 @@
+[23-Feb-2023 21:37:11 UTC] PHP Warning:  Undefined property: WP_Ajax_Upgrader_Skin::$api in /Users/adam/Local Sites/new-yorker-clone/app/public/wp-admin/includes/class-theme-upgrader.php on line 160
+[24-Feb-2023 18:29:29 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-customize-widgets.php on line 900
+[24-Feb-2023 18:29:43 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-customize-widgets.php on line 900
+[24-Feb-2023 18:44:11 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "university_files" not found or invalid function name in /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-hook.php:308
+Stack trace:
+#0 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#1 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/script-loader.php(2180): do_action('wp_enqueue_scri...')
+#3 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-hook.php(308): wp_enqueue_scripts('')
+#4 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#5 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#6 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/general-template.php(3043): do_action('wp_head')
+#7 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-content/themes/new-yorker-clone/header.php(8): wp_head()
+#8 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/template.php(783): require_once('/Users/adam/Loc...')
+#9 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/template.php(718): load_template('/Users/adam/Loc...', true, Array)
+#10 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#11 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-content/themes/new-yorker-clone/index.php(1): get_header()
+#12 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/template-loader.php(106): include('/Users/adam/Loc...')
+#13 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-blog-header.php(19): require_once('/Users/adam/Loc...')
+#14 /Users/adam/Local Sites/new-yorker-clone/app/public/index.php(17): require('/Users/adam/Loc...')
+#15 {main}
+  thrown in /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-hook.php on line 308
+[24-Feb-2023 18:44:41 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "university_files" not found or invalid function name in /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-hook.php:308
+Stack trace:
+#0 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#1 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/script-loader.php(2180): do_action('wp_enqueue_scri...')
+#3 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-hook.php(308): wp_enqueue_scripts('')
+#4 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#5 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#6 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/general-template.php(3043): do_action('wp_head')
+#7 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-content/themes/new-yorker-clone/header.php(8): wp_head()
+#8 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/template.php(783): require_once('/Users/adam/Loc...')
+#9 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/template.php(718): load_template('/Users/adam/Loc...', true, Array)
+#10 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#11 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-content/themes/new-yorker-clone/index.php(1): get_header()
+#12 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/template-loader.php(106): include('/Users/adam/Loc...')
+#13 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-blog-header.php(19): require_once('/Users/adam/Loc...')
+#14 /Users/adam/Local Sites/new-yorker-clone/app/public/index.php(17): require('/Users/adam/Loc...')
+#15 {main}
+  thrown in /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-hook.php on line 308
+[24-Feb-2023 18:48:56 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "main-styles" not found or invalid function name in /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-hook.php:308
+Stack trace:
+#0 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#1 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/script-loader.php(2180): do_action('wp_enqueue_scri...')
+#3 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-hook.php(308): wp_enqueue_scripts('')
+#4 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#5 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#6 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/general-template.php(3043): do_action('wp_head')
+#7 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-content/themes/new-yorker-clone/header.php(8): wp_head()
+#8 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/template.php(783): require_once('/Users/adam/Loc...')
+#9 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/template.php(718): load_template('/Users/adam/Loc...', true, Array)
+#10 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#11 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-content/themes/new-yorker-clone/index.php(1): get_header()
+#12 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/template-loader.php(106): include('/Users/adam/Loc...')
+#13 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-blog-header.php(19): require_once('/Users/adam/Loc...')
+#14 /Users/adam/Local Sites/new-yorker-clone/app/public/index.php(17): require('/Users/adam/Loc...')
+#15 {main}
+  thrown in /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-hook.php on line 308
+[25-Feb-2023 00:16:44 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-customize-widgets.php on line 900
+[25-Feb-2023 00:16:58 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-customize-widgets.php on line 900
