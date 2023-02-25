@@ -2,6 +2,7 @@ header {
   box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px;
   position: sticky;
   width: 100%;
+  z-index: 99;
 }
 
 //logo area
@@ -12,12 +13,27 @@ header {
   font-family: $graphik;
   font-size: 12px;
   border-bottom: 1px solid rgb(229, 229, 229);
-  height: 7rem;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: 0.2s ease-in-out;
+  background-color: white;
 }
 
 .offer-section {
-  height: 100px;
+  height: auto;
   width: 25%;
+  display: flex;
+  justify-content: center;
+  transition: 0.2s ease-in-out;
+  @include atMedium {
+    display: none;
+  }
+}
+
+#hero-offer {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
 }
 
 .main-logo {
@@ -25,7 +41,7 @@ header {
 }
 
 .utility-links {
-  height: 100px;
+  height: auto;
   width: 25%;
 }
 
@@ -37,6 +53,25 @@ header {
   @include push--auto;
   width: 300px;
   height: auto;
+  transition: 0.2s ease-in-out;
+  @include atMedium {
+    width: 110px;
+    display: none;
+  }
+}
+
+#mobile-logo {
+  @include push--auto;
+  width: 110px;
+  height: auto;
+  transition: 0.2s ease-in-out;
+  @include atLarge {
+    display: none;
+  }
+}
+
+#menu {
+  transition: 0.2s ease-in-out;
 }
 
 .utility-links {
@@ -45,6 +80,12 @@ header {
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.utility-links a {
+  @include atMedium {
+    display: none;
+  }
 }
 
 //navigation
@@ -62,4 +103,19 @@ header {
   display: flex;
   justify-content: center;
   height: 3rem;
+}
+
+.persistent-top {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 99;
+  max-height: 50px;
+}
+
+.site-header .container {
+  @include atMedium {
+    display: none;
+  }
 }

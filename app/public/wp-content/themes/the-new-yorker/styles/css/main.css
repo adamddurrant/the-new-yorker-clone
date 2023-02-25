@@ -14,6 +14,10 @@
 }
 
 */
+.container {
+  max-width: 1470px;
+}
+
 @font-face {
   font-family: "Irvin Heading";
   src: url("../../assets/fonts/NewYorker.woff2") format("woff2-variations");
@@ -143,7 +147,6 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -267,12 +270,18 @@ footer {
   border: none;
   cursor: pointer;
 }
+@media (max-width: 767px) {
+  .header-subscribe {
+    font-size: 0.769rem;
+  }
+}
 
 header {
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
   position: sticky;
   width: 100%;
+  z-index: 99;
 }
 
 .logo-banner {
@@ -288,12 +297,36 @@ header {
   font-family: Graphik;
   font-size: 12px;
   border-bottom: 1px solid rgb(229, 229, 229);
-  height: 7rem;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  background-color: white;
 }
 
 .offer-section {
-  height: 100px;
+  height: auto;
   width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+@media (max-width: 960px) {
+  .offer-section {
+    display: none;
+  }
+}
+
+#hero-offer {
+  opacity: 0;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .main-logo {
@@ -303,7 +336,7 @@ header {
 }
 
 .utility-links {
-  height: 100px;
+  height: auto;
   width: 25%;
 }
 
@@ -316,6 +349,33 @@ header {
   margin-right: auto;
   width: 300px;
   height: auto;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+@media (max-width: 960px) {
+  #logo {
+    width: 110px;
+    display: none;
+  }
+}
+
+#mobile-logo {
+  margin-left: auto;
+  margin-right: auto;
+  width: 110px;
+  height: auto;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+@media (min-width: 961px) {
+  #mobile-logo {
+    display: none;
+  }
+}
+
+#menu {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .utility-links {
@@ -336,6 +396,12 @@ header {
       flex-wrap: wrap;
 }
 
+@media (max-width: 960px) {
+  .utility-links a {
+    display: none;
+  }
+}
+
 .navigation-menu > ul > li {
   margin-right: 1rem;
   font-family: Graphik;
@@ -354,6 +420,21 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   height: 3rem;
+}
+
+.persistent-top {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 99;
+  max-height: 50px;
+}
+
+@media (max-width: 960px) {
+  .site-header .container {
+    display: none;
+  }
 }
 
 footer {
@@ -489,4 +570,107 @@ footer {
 
 .footer-legal a {
   text-decoration: underline;
+}
+
+.hamburger {
+  width: 40px;
+  cursor: pointer;
+  display: block;
+  height: 35px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+@media (min-width: 961px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  display: block;
+  background-color: black;
+  margin: 6px 0px;
+}
+
+.hamburger.is-active:before {
+  -webkit-transform: rotate(-45deg) translate(-6px, 5px);
+          transform: rotate(-45deg) translate(-6px, 5px);
+}
+
+.hamburger.is-active:after {
+  -webkit-transform: rotate(45deg) translate(-8px, -7px);
+          transform: rotate(45deg) translate(-8px, -7px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.mobile-navigation-menu {
+  display: block;
+  position: fixed;
+  opacity: 0;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 98;
+  background-color: white;
+  padding-top: 120px;
+  overflow-y: scroll;
+}
+@media (min-width: 961px) {
+  .mobile-navigation-menu {
+    display: none;
+  }
+}
+.mobile-navigation-menu ul {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.mobile-navigation-menu a {
+  font-family: Irvin Heading;
+  text-transform: uppercase;
+  display: block;
+  text-align: left;
+  margin-bottom: 2rem;
+  padding: 12px 16px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 16px;
+}
+
+.burger-box {
+  width: 25%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 21px;
+}
+@media (min-width: 961px) {
+  .burger-box {
+    display: none;
+  }
+}
+
+.mobile-navigation-menu.is-active {
+  opacity: 1;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }

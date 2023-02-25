@@ -14,4 +14,7 @@
   width: 112px;
   border: none;
   cursor: pointer;
+  @include atSmall {
+    font-size: $--font-s;
+  }
 }
