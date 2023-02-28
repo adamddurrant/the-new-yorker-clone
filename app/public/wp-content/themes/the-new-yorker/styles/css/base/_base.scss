@@ -1,3 +1,6 @@
-.container {
-  max-width: 1470px;
+main {
+  padding-top: 180px;
+  @include atMedium {
+    padding-top: 90px;
+  }
 }

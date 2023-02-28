@@ -1,8 +1,10 @@
 .container {
-  max-width: 1300px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 16px;
   position: relative;
+  padding-right: calc(1 * 3rem);
+  padding-left: calc(1 * 3rem);
 }
 
 .section-break {
@@ -39,4 +41,57 @@
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.blue-link {
+  color: $light-blue;
+  text-decoration: underline;
+  font-family: $adobe-caslon;
+  transition: 0.2s ease-in-out;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.blue-link:hover {
+  color: $dark-gray;
+  transition: 0.2s ease-in-out;
+}
+
+.home-divider {
+  border: 0;
+  margin-bottom: 3rem;
+}
+
+.archiveCategory {
+  color: rgb(219, 51, 52);
+  font-family: $irvin-heading;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-bottom: 0.8rem;
+  padding-top: 0.8rem;
+}
+
+.archiveTitle {
+  color: black;
+  font-family: $irvin-heading;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding-bottom: 0.8rem;
+  line-height: 1.2em;
+}
+
+.archiveExcerpt {
+  padding-bottom: 0.8rem;
+  font-style: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: 1.33333em;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.archiveAuthor {
+  font-family: $graphik;
+  font-weight: 600;
+  font-size: 15px;
 }

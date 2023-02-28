@@ -60,3 +60,17 @@ Stack trace:
   thrown in /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-hook.php on line 308
 [25-Feb-2023 00:16:44 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-customize-widgets.php on line 900
 [25-Feb-2023 00:16:58 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/class-wp-customize-widgets.php on line 900
+[28-Feb-2023 14:49:33 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "single" in /Users/adam/Local Sites/new-yorker-clone/app/public/wp-content/themes/the-new-yorker/index.php:40
+Stack trace:
+#0 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-blog-header.php(19): require_once('/Users/adam/Loc...')
+#2 /Users/adam/Local Sites/new-yorker-clone/app/public/index.php(17): require('/Users/adam/Loc...')
+#3 {main}
+  thrown in /Users/adam/Local Sites/new-yorker-clone/app/public/wp-content/themes/the-new-yorker/index.php on line 40
+[28-Feb-2023 14:49:42 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "single" in /Users/adam/Local Sites/new-yorker-clone/app/public/wp-content/themes/the-new-yorker/index.php:40
+Stack trace:
+#0 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/adam/Local Sites/new-yorker-clone/app/public/wp-blog-header.php(19): require_once('/Users/adam/Loc...')
+#2 /Users/adam/Local Sites/new-yorker-clone/app/public/index.php(17): require('/Users/adam/Loc...')
+#3 {main}
+  thrown in /Users/adam/Local Sites/new-yorker-clone/app/public/wp-content/themes/the-new-yorker/index.php on line 40

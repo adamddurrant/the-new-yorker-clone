@@ -1,0 +1,54 @@
+.thumbnail img {
+  width: 100%;
+  height: auto;
+}
+
+.twelveGrid {
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 2rem;
+  grid-template-rows: 1fr;
+  border: 1px solid red;
+  display: grid;
+  justify-content: center;
+}
+
+.sixGrid {
+  grid-gap: 2rem;
+  grid-template-rows: 1fr;
+  border: 1px solid red;
+  display: grid;
+  grid-column: 4 / span 6;
+}
+
+.threeGridOne {
+  grid-gap: 2rem;
+  grid-column: span 3;
+  grid-template-rows: 1fr;
+  border: 1px solid red;
+  display: grid;
+  border-right: 1px solid rgb(229, 229, 229);
+  padding-right: 1rem;
+  margin: 0 calc(1rem * -1) 0 0;
+}
+
+.threeGridTwo {
+  grid-gap: 2rem;
+  grid-column: span 3;
+  grid-template-rows: 1fr;
+  border: 1px solid red;
+  display: grid;
+  border-left: 1px solid rgb(229, 229, 229);
+  padding-left: 1rem;
+  margin: 0 0 0 calc(1rem * -1);
+}
+
+.bump {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.content-wrap-one {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(229, 229, 229);
+  text-decoration: none !important;
+}
