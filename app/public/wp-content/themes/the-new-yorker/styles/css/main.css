@@ -85,16 +85,6 @@ a {
   text-decoration: none;
 }
 
-a[href*=http] {
-  text-decoration: underline;
-  -webkit-transition: color 100ms ease;
-  transition: color 100ms ease;
-}
-
-span a[href*=http]:hover {
-  color: var(--gray12);
-}
-
 @font-face {
   font-family: "Irvin Heading";
   src: url("../../assets/fonts/NewYorker.woff2") format("woff2-variations");
@@ -284,6 +274,12 @@ select {
   font-size: 12px;
   padding-bottom: 0.8rem;
   padding-top: 0.8rem;
+  text-decoration: none;
+}
+
+.archiveCatLink:hover {
+  text-decoration: underline;
+  color: rgb(219, 51, 52);
 }
 
 .archiveTitle {
@@ -293,6 +289,10 @@ select {
   font-size: 20px;
   padding-bottom: 0.8rem;
   line-height: 1.2em;
+}
+
+.archiveTitle:hover {
+  text-decoration: underline;
 }
 
 .archiveExcerpt {
@@ -656,6 +656,20 @@ footer {
   margin: 0 0 0 -1rem;
 }
 
+.featuredThreeGrid {
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border: 1px solid red;
+  display: grid;
+}
+.featuredThreeGrid .featuredThreeSummary {
+  grid-column: span 2;
+}
+.featuredThreeGrid .featuredThreeImage {
+  grid-column: span 1;
+}
+
 .bump {
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -665,6 +679,11 @@ footer {
   padding-bottom: 1rem;
   border-bottom: 1px solid rgb(229, 229, 229);
   text-decoration: none !important;
+}
+
+.featuredThreeImage {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .header-subscribe {
@@ -795,6 +814,7 @@ footer {
 
 .marketing-banner {
   padding: 0.5rem 0px;
+  margin-bottom: 20px;
   border-top: 1px solid;
   border-bottom: 1px solid;
   border-color: rgb(229, 229, 229);

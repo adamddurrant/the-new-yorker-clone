@@ -20,6 +20,9 @@ function new_yorker_features() //enable features in WP
   //enable title tags & featured image
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
+
+  //add custom image size on upload for home main featured
+  add_image_size('homeImages', 1280, 960, true); //Adds a custom image size on upload 
 }
 //Enqueue header titles
 add_action('after_setup_theme', 'new_yorker_features');

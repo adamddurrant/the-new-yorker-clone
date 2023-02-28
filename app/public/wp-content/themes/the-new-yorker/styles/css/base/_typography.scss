@@ -61,11 +61,3 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
-a[href*="http"] {
-  text-decoration: underline;
-  transition: color 100ms ease;
-}
-span a[href*="http"]:hover {
-  color: var(--gray12);
-}
