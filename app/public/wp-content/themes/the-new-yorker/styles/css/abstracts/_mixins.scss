@@ -12,8 +12,15 @@
     @content;
   }
 }
+
+@mixin atLaptop {
+  @media screen and (max-width: 1200px) and (min-width: 961px) {
+    @content;
+  }
+}
+
 @mixin atLarge {
-  @media (min-width: 961px) {
+  @media (min-width: 1201px) {
     @content;
   }
 }

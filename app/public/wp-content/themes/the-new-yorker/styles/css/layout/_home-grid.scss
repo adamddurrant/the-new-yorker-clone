@@ -16,6 +16,13 @@
   grid-template-rows: 1fr;
   display: grid;
   grid-column: 4 / span 6;
+  @include atMedium {
+    grid-column: span 12;
+    order: -1;
+  }
+  @include atLaptop {
+    grid-template-rows: 1fr 0.5fr;
+  }
 }
 
 .threeGridOne {
@@ -26,6 +33,12 @@
   border-right: 1px solid rgb(229, 229, 229);
   padding-right: 1rem;
   margin: 0 calc(1rem * -1) 0 0;
+  @include atMedium {
+    grid-column: span 12;
+  }
+  @include atLaptop {
+    grid-template-rows: 0.5fr 1fr;
+  }
 }
 
 .content-wrap-one:nth-child(2) {
@@ -43,6 +56,12 @@
   grid-template-rows: 0.2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
   justify-content: center;
   align-content: center;
+  @include atMedium {
+    grid-column: span 12;
+  }
+  @include atLaptop {
+    grid-template-rows: 0.2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  }
 }
 
 .featuredThreeGrid {
@@ -53,10 +72,17 @@
 
   .featuredThreeSummary {
     grid-column: span 2;
+    @include atMedium {
+      grid-column: span 12;
+    }
   }
 
   .featuredThreeImage {
     grid-column: span 1;
+    @include atMedium {
+      grid-column: span 12;
+      order: -1;
+    }
   }
 }
 
