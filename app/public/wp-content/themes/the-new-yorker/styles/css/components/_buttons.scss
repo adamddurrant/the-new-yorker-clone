@@ -16,5 +16,6 @@
   cursor: pointer;
   @include atSmall {
     font-size: $--font-s;
+    margin-right: 0;
   }
 }

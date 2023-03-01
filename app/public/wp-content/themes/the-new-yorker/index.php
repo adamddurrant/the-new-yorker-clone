@@ -15,25 +15,24 @@
 
   <div class="section">
     <div class="container">
-      <?php
+      <?php //Queries for hero grid
       $homeGridFirstTwo = new WP_Query(array(
-        //Orders events by upcoming date from advanced field
         'posts_per_page' => 2,
         'post_type' => 'post',
+        'category__not_in' => array(6),
         'post_status' => 'publish',
         'order' => 'ASC',
         'orderby' => 'date',
       ));
       $homeGridFeatured = new WP_Query(array(
-        //Orders events by upcoming date from advanced field
         'posts_per_page' => 1,
         'post_type' => 'post',
+        'category__not_in' => array(6),
         'post_status' => 'publish',
         'order' => 'ASC',
         'orderby' => 'meta_value',
         'meta_key' => 'homepage_feature_story',
         'meta_query' => array(
-          //Filters out posts that are not featured
           array(
             'key' => 'homepage_feature_story',
             'compare' => '=',
@@ -42,18 +41,19 @@
         )
       ));
       $secondaryHomeGridFeatured = new WP_Query(array(
-        //Orders events by upcoming date from advanced field
         'posts_per_page' => 1,
         'offset' => 2,
+        'category__not_in' => array(6),
+
         'post_type' => 'post',
         'post_status' => 'publish',
         'order' => 'ASC',
         'orderby' => 'date',
       ));
       $homeGridList = new WP_Query(array(
-        //Orders events by upcoming date from advanced field
         'posts_per_page' => 5,
         'offset' => 3,
+        'category__not_in' => array(6),
         'post_type' => 'post',
         'post_status' => 'publish',
         'order' => 'ASC',
@@ -63,7 +63,6 @@
       <div class="twelveGrid">
         <div class="threeGridOne">
           <?php
-          //loop through posts and fetch data
           while ($homeGridFirstTwo->have_posts()) {
             $homeGridFirstTwo->the_post();
             $category = get_the_category();
@@ -226,6 +225,81 @@
     </div>
   </div>
 
+  <section class="puzzles-games">
+    <div class="container">
+      <div class="twelveGridPuzzle">
+        <div class="fourGridPuzzle">
+          <div class="puzzle-image">
+            <a href="#">
+              <img class="puzzleImage" src="<?php echo get_theme_file_uri('/assets/images/puzzles/name-drop.webp') ?>" alt="">
+            </a>
+          </div>
+          <div class="puzzle-summary">
+            <a href="#">
+              <div class="archiveTitle">
+                Name Drop</div>
+            </a>
+            <a href="#">
+              <div class="archiveExcerpt">
+                A quiz that tests your knowledge of notable people, published every weekday.</div>
+            </a>
+          </div>
+        </div>
+        <div class="fourGridPuzzle">
+          <div class="puzzle-image">
+            <a href="#">
+              <img class="puzzleImage" src="<?php echo get_theme_file_uri('/assets/images/puzzles/crossword.webp') ?>" alt="">
+            </a>
+          </div>
+          <div class="puzzle-summary">
+            <a href="#">
+              <div class="archiveTitle">
+                The Crossword</div>
+            </a>
+            <a href="#">
+              <div class="archiveExcerpt">
+                A puzzle that ranges from lightly to considerably challenging, published every weekday.</div>
+            </a>
+          </div>
+        </div>
+        <div class="fourGridPuzzle">
+          <div class="puzzle-image">
+            <a href="#">
+              <img class="puzzleImage" src="<?php echo get_theme_file_uri('/assets/images/puzzles/cryptic.webp') ?>" alt="">
+            </a>
+          </div>
+          <div class="puzzle-summary">
+            <a href="#">
+              <div class="archiveTitle">
+                The Cryptic Crossword</div>
+            </a>
+            <a href="#">
+              <div class="archiveExcerpt">
+                A weekly puzzle for lovers of wily wordplay.</div>
+            </a>
+          </div>
+        </div>
+        <div class="fourGridPuzzle">
+          <div class="puzzle-image">
+            <a href="#">
+              <img class="puzzleImage" src="<?php echo get_theme_file_uri('/assets/images/puzzles/caption.webp') ?>" alt="">
+            </a>
+          </div>
+          <div class="puzzle-summary">
+            <a href="#">
+              <div class="archiveTitle">
+                Caption Contest</div>
+            </a>
+            <a href="#">
+              <div class="archiveExcerpt">
+                We provide a cartoon, you provide a caption.</div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
 </main>
 

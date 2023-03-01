@@ -23,6 +23,10 @@ main {
   }
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: "Irvin Heading";
   src: url("../../assets/fonts/NewYorker.woff2") format("woff2-variations");
@@ -590,6 +594,9 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 
 .sixGrid {
@@ -827,6 +834,63 @@ footer {
   }
 }
 
+.twelveGridPuzzle {
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 2rem;
+  grid-template-rows: 1fr;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.fourGridPuzzle {
+  grid-gap: 1rem;
+  grid-template-rows: 1fr auto;
+  grid-column: span 3;
+  display: grid;
+}
+@media (max-width: 960px) {
+  .fourGridPuzzle {
+    grid-column: span 12;
+    grid-template-columns: 2fr 1fr;
+    border-bottom: 1px solid rgb(229, 229, 229);
+  }
+}
+
+@media (max-width: 960px) {
+  .puzzle-image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+.puzzleImage {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 960px) {
+  .puzzleImage {
+    height: 90px;
+    width: 90px;
+  }
+}
+
+@media (max-width: 960px) {
+  .puzzle-summary {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
 .header-subscribe {
   background: #0787ca;
   border-radius: 2px;
@@ -847,6 +911,7 @@ footer {
 @media (max-width: 767px) {
   .header-subscribe {
     font-size: 0.769rem;
+    margin-right: 0;
   }
 }
 
@@ -1000,7 +1065,8 @@ footer {
   padding: 2rem 0 2rem 0;
   border-top: 1px solid rgb(229, 229, 229);
   border-bottom: 1px solid rgb(229, 229, 229);
-  margin-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .section-title h2 {
   font-family: Irvin Heading;

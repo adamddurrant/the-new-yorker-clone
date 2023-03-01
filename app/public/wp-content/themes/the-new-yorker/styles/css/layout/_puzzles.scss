@@ -1,0 +1,41 @@
+.twelveGridPuzzle {
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 2rem;
+  grid-template-rows: 1fr;
+  display: grid;
+  justify-content: center;
+  align-items: start;
+}
+
+.fourGridPuzzle {
+  grid-gap: 1rem;
+  grid-template-rows: 1fr auto;
+  grid-column: span 3;
+  display: grid;
+  @include atMedium {
+    grid-column: span 12;
+    grid-template-columns: 2fr 1fr;
+    border-bottom: 1px solid rgb(229, 229, 229);
+  }
+}
+
+.puzzle-image {
+  @include atMedium {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.puzzleImage {
+  object-fit: contain;
+  @include atMedium {
+    height: 90px;
+    width: 90px;
+  }
+}
+
+.puzzle-summary {
+  @include atMedium {
+    order: -1;
+  }
+}
