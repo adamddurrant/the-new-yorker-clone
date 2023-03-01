@@ -267,48 +267,9 @@ select {
   margin-bottom: 3rem;
 }
 
-.archiveCategory {
-  color: rgb(219, 51, 52);
-  font-family: Irvin Heading;
-  text-transform: uppercase;
-  font-size: 12px;
-  padding-bottom: 0.8rem;
-  padding-top: 0.8rem;
-  text-decoration: none;
-}
-
-.archiveCatLink:hover {
-  text-decoration: underline;
-  color: rgb(219, 51, 52);
-}
-
-.archiveTitle {
-  color: black;
-  font-family: Irvin Heading;
-  text-transform: uppercase;
-  font-size: 20px;
-  padding-bottom: 0.8rem;
-  line-height: 1.2em;
-}
-
-.archiveTitle:hover {
-  text-decoration: underline;
-}
-
-.archiveExcerpt {
-  padding-bottom: 0.8rem;
-  font-style: normal;
-  letter-spacing: normal;
-  line-break: auto;
-  line-height: 1.33333em;
-  font-size: 17px;
-  font-weight: 400;
-}
-
-.archiveAuthor {
-  font-family: Graphik;
-  font-weight: 600;
-  font-size: 15px;
+.no-wrap {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 header {
@@ -619,7 +580,6 @@ footer {
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 2rem;
   grid-template-rows: 1fr;
-  border: 1px solid red;
   display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -629,7 +589,6 @@ footer {
 .sixGrid {
   grid-gap: 2rem;
   grid-template-rows: 1fr;
-  border: 1px solid red;
   display: grid;
   grid-column: 4/span 6;
 }
@@ -638,29 +597,38 @@ footer {
   grid-gap: 2rem;
   grid-column: span 3;
   grid-template-rows: 1fr;
-  border: 1px solid red;
   display: grid;
   border-right: 1px solid rgb(229, 229, 229);
   padding-right: 1rem;
   margin: 0 -1rem 0 0;
 }
 
+.content-wrap-one:nth-child(2) {
+  border: none;
+}
+
 .threeGridTwo {
-  grid-gap: 2rem;
   grid-column: span 3;
   grid-template-rows: 1fr;
-  border: 1px solid red;
   display: grid;
   border-left: 1px solid rgb(229, 229, 229);
   padding-left: 1rem;
   margin: 0 0 0 -1rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-template-rows: 0.2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .featuredThreeGrid {
   grid-gap: 2rem;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  border: 1px solid red;
   display: grid;
 }
 .featuredThreeGrid .featuredThreeSummary {
@@ -684,6 +652,100 @@ footer {
 .featuredThreeImage {
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.archiveCategory {
+  color: rgb(219, 51, 52);
+  font-family: Irvin Heading;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-bottom: 0.8rem;
+  padding-top: 0.8rem;
+  text-decoration: none;
+}
+
+.archiveCatLink:hover {
+  text-decoration: underline;
+  color: rgb(219, 51, 52);
+}
+
+.archiveTitle {
+  color: black;
+  font-family: Irvin Heading;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding-bottom: 0.8rem;
+  line-height: 1.2em;
+}
+
+.archiveTitle:hover {
+  text-decoration: underline;
+}
+
+.archiveTitleList {
+  color: black;
+  font-family: Caslon New;
+  text-transform: capitalize;
+  font-size: 20px;
+  padding-bottom: 0.8rem;
+  line-height: 1.2em;
+}
+
+.archiveTitleList:hover {
+  text-decoration: underline;
+}
+
+.archiveExcerpt {
+  padding-bottom: 0.8rem;
+  font-style: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: 1.33333em;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.archiveAuthor {
+  font-family: Graphik;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.threeGridTwoHeading {
+  font-family: Irvin Heading;
+  font-size: 22px;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: 1.09091em;
+  text-transform: none;
+}
+
+.threeGridTwoHeadingWrapper {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.threeGridTwoBlock {
+  border-bottom: 1px solid rgb(229, 229, 229);
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.threeGridTwoBlock .archiveCategory {
+  padding-top: 0px;
+}
+
+.threeGridTwoBlock:nth-child(6) {
+  border: none;
+}
+
+.miniThumbnail {
+  margin-left: 10px;
+}
+
+.miniThumbnail img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 70px;
 }
 
 .header-subscribe {
@@ -814,7 +876,7 @@ footer {
 
 .marketing-banner {
   padding: 0.5rem 0px;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
   border-top: 1px solid;
   border-bottom: 1px solid;
   border-color: rgb(229, 229, 229);
@@ -837,4 +899,16 @@ footer {
   padding-right: 10px;
   font-size: 18px;
   font-weight: 400;
+}
+
+.section-title {
+  padding: 2rem 0 2rem 0;
+  border-top: 1px solid rgb(229, 229, 229);
+  border-bottom: 1px solid rgb(229, 229, 229);
+  margin-top: 1rem;
+}
+.section-title h2 {
+  font-family: Irvin Heading;
+  font-size: 20px;
+  text-align: center;
 }
