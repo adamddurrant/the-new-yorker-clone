@@ -190,24 +190,27 @@
             $categoryLink = get_category_link($category[0]->term_id);
           ?>
             <div class="threeGridTwoBlock">
-              <a class="archiveCatLink" href="<?php echo $categoryLink ?>">
-                <div class="archiveCategory">
-                  <?php
-                  $category = get_the_category();
-                  echo $category[0]->cat_name;
-                  ?>
-                </div>
-              </a>
-              <a class="flex-row no-wrap" href="<?php the_permalink(); ?>">
-                <div class="archiveTitleList">
-                  <?php the_title(); ?></div>
-                <div class="miniThumbnail"><?php the_post_thumbnail('thumbnail'); ?>
-                </div>
-              </a>
-              <a href="<?php the_permalink(); ?>">
-                <div class="archiveAuthor">By <?php the_author(); ?></div>
-              </a>
+              <div class="listSummary">
+                <a class="archiveCatLink" href="<?php echo $categoryLink ?>">
+                  <div class="archiveCategory">
+                    <?php
+                    $category = get_the_category();
+                    echo $category[0]->cat_name;
+                    ?>
+                  </div>
+                </a>
+                <a class="flex-row no-wrap" href="<?php the_permalink(); ?>">
+                  <div class="archiveTitleList">
+                    <?php the_title(); ?></div>
+                </a>
+                <a href="<?php the_permalink(); ?>">
+                  <div class="archiveAuthor">By <?php the_author(); ?></div>
+                </a>
+              </div>
 
+              <div class="miniThumbnail"><?php the_post_thumbnail('thumbnail'); ?>
+
+              </div>
             </div>
           <?php }
           wp_reset_postdata();

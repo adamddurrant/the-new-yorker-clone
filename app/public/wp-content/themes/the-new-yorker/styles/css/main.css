@@ -656,11 +656,22 @@ footer {
 @media (max-width: 960px) {
   .threeGridTwo {
     grid-column: span 12;
+    padding-left: 0;
+    border-left: none;
+    margin: 0;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: 961px) {
   .threeGridTwo {
     grid-template-rows: 0.2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  }
+}
+@media (max-width: 960px) {
+  .threeGridTwo {
+    grid-template-rows: 0.2fr 0.5fr 0.5fr 0.5fr;
   }
 }
 
@@ -781,6 +792,8 @@ footer {
   border-bottom: 1px solid rgb(229, 229, 229);
   padding-bottom: 1rem;
   padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 .threeGridTwoBlock .archiveCategory {
   padding-top: 0px;
@@ -791,13 +804,27 @@ footer {
 }
 
 .miniThumbnail {
-  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .miniThumbnail img {
   -o-object-fit: contain;
      object-fit: contain;
-  height: 70px;
+  height: 90px;
+  margin-left: 100%;
+}
+@media (max-width: 767px) {
+  .miniThumbnail img {
+    height: 70px;
+  }
 }
 
 .header-subscribe {

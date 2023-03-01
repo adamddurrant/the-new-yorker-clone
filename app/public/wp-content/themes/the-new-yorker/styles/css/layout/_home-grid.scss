@@ -58,9 +58,16 @@
   align-content: center;
   @include atMedium {
     grid-column: span 12;
+    padding-left: 0;
+    border-left: none;
+    margin: 0;
+    justify-content: initial;
   }
   @include atLaptop {
     grid-template-rows: 0.2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  }
+  @include atMedium {
+    grid-template-rows: 0.2fr 0.5fr 0.5fr 0.5fr;
   }
 }
 
@@ -177,6 +184,8 @@
   border-bottom: 1px solid rgb(229, 229, 229);
   padding-bottom: 1rem;
   padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   .archiveCategory {
     padding-top: 0px;
   }
@@ -187,10 +196,16 @@
 }
 
 .miniThumbnail {
-  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .miniThumbnail img {
   object-fit: contain;
-  height: 70px;
+  height: 90px;
+  margin-left: 100%;
+  @include atSmall {
+    height: 70px;
+  }
 }
